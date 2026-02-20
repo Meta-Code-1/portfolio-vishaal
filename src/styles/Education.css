@@ -1,0 +1,106 @@
+/* Education.css */
+.education-section {
+    padding: 100px 20px;
+    background-color: #0b0f19;
+    /* Optional: subtle difference from other sections or keep same background */
+}
+
+.education-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.education-card {
+    display: flex;
+    gap: 24px;
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: rgba(167, 139, 250, 0.3);
+    transform: translateX(5px);
+}
+
+.edu-icon-wrapper {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(167, 139, 250, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a78bfa;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.edu-content {
+    flex-grow: 1;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.edu-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+}
+
+.edu-year {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.edu-institution {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.edu-details {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .education-card {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .edu-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .edu-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

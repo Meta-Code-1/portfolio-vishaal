@@ -2,8 +2,9 @@
 .achievements-section {
     position: relative;
     padding: 100px 20px;
-    background-color: #0b0f19;
+    background-color: var(--bg-primary);
     overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
 .achievements-bg-glow {
@@ -34,9 +35,9 @@
 
 .achievement-card {
     position: relative;
-    background: rgba(30, 41, 59, 0.4);
+    background: var(--card-bg);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     border-radius: 20px;
     padding: 30px;
     text-align: center;
@@ -48,30 +49,30 @@
 }
 
 .achievement-card:hover {
-    background: rgba(30, 41, 59, 0.6);
-    border-color: rgba(56, 189, 248, 0.3);
-    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5);
+    background: var(--glass-bg);
+    border-color: var(--accent);
+    box-shadow: 0 12px 30px -10px var(--shadow-color);
 }
 
 .card-bg-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+    background: linear-gradient(180deg, var(--glass-border) 0%, transparent 100%);
     pointer-events: none;
 }
 
 .achievement-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, var(--glass-border) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid var(--glass-border);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #38bdf8;
+    color: var(--accent);
     margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .achievement-metric {
@@ -79,7 +80,7 @@
     font-weight: 800;
     line-height: 1;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -88,13 +89,13 @@
 .achievement-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #a78bfa;
+    color: var(--accent-purple);
     margin-bottom: 12px;
 }
 
 .achievement-desc {
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: var(--text-secondary);
     line-height: 1.6;
 }
 

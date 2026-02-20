@@ -2,17 +2,18 @@
 
 .experience-section {
     position: relative;
-    background-color: #0b0f19;
+    background-color: var(--bg-primary);
     padding: 100px 20px;
     overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
 .experience-bg-grid {
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(var(--glass-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--glass-border) 1px, transparent 1px);
     background-size: 60px 60px;
     opacity: 0.4;
     z-index: 0;
@@ -48,19 +49,19 @@
 .linear-title-sm {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: var(--text-primary);
     margin-bottom: 16px;
     letter-spacing: -0.02em;
 }
 
 .linear-subtitle-sm {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
 .linear-subtitle-sm strong {
-    color: #e2e8f0;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -117,8 +118,8 @@
 .timeline-dot {
     width: 16px;
     height: 16px;
-    background: #0b0f19;
-    border: 2px solid #38bdf8;
+    background: var(--bg-primary);
+    border: 2px solid var(--accent);
     border-radius: 50%;
     z-index: 2;
     box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
@@ -155,9 +156,9 @@
 .timeline-card {
     width: 45%;
     position: relative;
-    background: rgba(30, 41, 59, 0.4);
+    background: var(--card-bg);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 24px;
     transition: all 0.3s ease;
@@ -165,10 +166,10 @@
 }
 
 .timeline-card:hover {
-    background: rgba(30, 41, 59, 0.6);
-    border-color: rgba(56, 189, 248, 0.3);
+    background: var(--glass-bg);
+    border-color: var(--accent);
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px -8px var(--shadow-color);
 }
 
 .card-glow {
@@ -189,7 +190,7 @@
 .role-header h3 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: var(--text-primary);
     margin-bottom: 8px;
 }
 
@@ -198,8 +199,8 @@
     align-items: center;
     gap: 6px;
     font-size: 0.9rem;
-    color: #cbd5e1;
-    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    background: var(--glass-border);
     padding: 4px 10px;
     border-radius: 6px;
     margin-bottom: 16px;
@@ -211,14 +212,14 @@
     gap: 12px;
     margin-bottom: 16px;
     font-size: 0.85rem;
-    color: #94a3b8;
+    color: var(--text-secondary);
 }
 
 .date-badge {
     display: flex;
     align-items: center;
     gap: 6px;
-    color: #a78bfa;
+    color: var(--accent-purple);
     font-weight: 500;
 }
 
@@ -232,7 +233,7 @@
     position: relative;
     padding-left: 18px;
     margin-bottom: 8px;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -241,7 +242,7 @@
     content: "•";
     position: absolute;
     left: 0;
-    color: #38bdf8;
+    color: var(--accent);
     font-weight: bold;
 }
 

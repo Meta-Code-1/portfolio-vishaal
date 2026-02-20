@@ -1,8 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Sun, Moon } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
 import '../styles/Header.css';
 
 const Header = () => {
+    const { theme, toggleTheme } = useTheme();
+
     return (
         <motion.header
             className="premium-header"
@@ -23,6 +27,13 @@ const Header = () => {
                         <li><a href="#education">Education</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    <button
+                        onClick={toggleTheme}
+                        className="theme-toggle"
+                        aria-label="Toggle theme"
+                    >
+                        {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
+                    </button>
                 </nav>
             </div>
         </motion.header>

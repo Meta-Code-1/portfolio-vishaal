@@ -1,19 +1,36 @@
 :root {
-  --bg-primary: #0b0f19;
-  /* Deep space blue/black */
-  --bg-secondary: #0f172a;
-  /* Slightly lighter */
-  --text-primary: #f8fafc;
-  /* White/slate-50 */
-  --text-secondary: #94a3b8;
-  /* slate-400 */
-  --accent: #38bdf8;
-  /* Sky blue */
-  --accent-purple: #a78bfa;
-  /* Violet */
-  --glass-border: rgba(255, 255, 255, 0.05);
+  /* Common Variables */
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Light Theme (Default) */
+  --bg-primary: #fdfbf7;
+  /* Off-white as requested */
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #0ea5e9;
+  /* Slightly darker for better visibility on light */
+  --accent-purple: #8b5cf6;
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0b0f19;
+  --bg-secondary: #0f172a;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --accent-purple: #a78bfa;
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(11, 15, 25, 0.7);
+  --card-bg: rgba(30, 41, 59, 0.4);
+  --nav-bg: rgba(11, 15, 25, 0.85);
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 * {

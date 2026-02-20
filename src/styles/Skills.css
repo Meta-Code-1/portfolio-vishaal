@@ -1,9 +1,10 @@
 /* Skills.css */
 .skills-section {
     position: relative;
-    background-color: #0b0f19;
+    background-color: var(--bg-primary);
     padding: 100px 20px;
     overflow: hidden;
+    transition: background-color 0.3s ease;
 }
 
 /* Background Texture */
@@ -11,8 +12,8 @@
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        linear-gradient(var(--glass-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--glass-border) 1px, transparent 1px);
     background-size: 40px 40px;
     opacity: 0.5;
     z-index: 0;
@@ -48,19 +49,19 @@
 .linear-title-sm {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #f8fafc;
+    color: var(--text-primary);
     margin-bottom: 16px;
     letter-spacing: -0.02em;
 }
 
 .linear-subtitle-sm {
-    color: #94a3b8;
+    color: var(--text-secondary);
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
 .linear-subtitle-sm strong {
-    color: #e2e8f0;
+    color: var(--text-primary);
     font-weight: 600;
 }
 
@@ -74,9 +75,9 @@
 /* Premium Card */
 .premium-skill-card {
     position: relative;
-    background: rgba(30, 41, 59, 0.4);
+    background: var(--card-bg);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 24px;
     display: flex;
@@ -87,27 +88,27 @@
 }
 
 .premium-skill-card:hover {
-    background: rgba(30, 41, 59, 0.6);
-    border-color: rgba(99, 102, 241, 0.3);
+    background: var(--glass-bg);
+    border-color: var(--accent);
     transform: translateY(-4px);
-    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 24px -8px var(--shadow-color);
 }
 
 .skill-icon-box {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, var(--glass-border) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid var(--glass-border);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #a78bfa;
+    color: var(--accent-purple);
     flex-shrink: 0;
 }
 
 .premium-skill-card:hover .skill-icon-box {
-    color: #38bdf8;
+    color: var(--accent);
     background: rgba(56, 189, 248, 0.1);
     border-color: rgba(56, 189, 248, 0.2);
 }
@@ -119,7 +120,7 @@
 .skill-content h3 {
     font-size: 1rem;
     font-weight: 600;
-    color: #e2e8f0;
+    color: var(--text-primary);
     margin-bottom: 6px;
 }
 
@@ -127,15 +128,15 @@
     font-size: 0.75rem;
     padding: 4px 8px;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    color: #94a3b8;
+    background: var(--glass-border);
+    color: var(--text-secondary);
     display: inline-block;
     border: 1px solid transparent;
 }
 
 .premium-skill-card:hover .skill-content .skill-tag {
-    background: rgba(255, 255, 255, 0.1);
-    color: #f1f5f9;
+    background: var(--glass-border);
+    color: var(--text-primary);
 }
 
 /* Hover Gradient */

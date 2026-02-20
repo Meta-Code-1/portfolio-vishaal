@@ -6,11 +6,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #0b0f19;
-    /* Very dark blue/black */
+    background-color: var(--bg-primary);
     overflow: hidden;
-    color: #fff;
+    color: var(--text-primary);
     padding: 120px 20px 80px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Linear Grid Background */
@@ -18,8 +18,8 @@
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(var(--glass-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--glass-border) 1px, transparent 1px);
     background-size: 60px 60px;
     z-index: 0;
     transform: perspective(1000px);
@@ -28,7 +28,7 @@
 .grid-fade {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle, transparent 0%, #0b0f19 80%);
+    background: radial-gradient(circle, transparent 0%, var(--bg-primary) 80%);
 }
 
 .beam {
@@ -112,20 +112,20 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--glass-border);
+    border: 1px solid var(--glass-border);
     padding: 6px 16px 6px 12px;
     border-radius: 20px;
     margin-bottom: 24px;
     font-size: 0.85rem;
-    color: #cbd5e1;
+    color: var(--text-secondary);
     cursor: default;
     transition: all 0.3s;
 }
 
 .announcement-badge:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: var(--glass-border);
+    border-color: var(--text-secondary);
 }
 
 .dot-indicator {
@@ -162,10 +162,11 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
+    color: var(--text-primary);
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #a78bfa 0%, #38bdf8 100%);
+    background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent) 100%);
     /* Violet to Cyan */
     -webkit-background-clip: text;
     background-clip: text;
@@ -174,14 +175,14 @@
 
 .linear-subtitle {
     font-size: 1.25rem;
-    color: #94a3b8;
+    color: var(--text-secondary);
     max-width: 650px;
     line-height: 1.6;
     margin-bottom: 2.5rem;
 }
 
 .linear-subtitle strong {
-    color: #f8fafc;
+    color: var(--text-primary);
     font-weight: 500;
 }
 
@@ -215,18 +216,19 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-    color: #e2e8f0;
+    background: var(--card-bg);
+    /* Use card-bg which is adapted to theme */
+    color: var(--text-primary);
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--glass-border);
     transition: all 0.2s;
 }
 
 .btn-linear-secondary:hover {
-    border-color: #64748b;
-    background: #1e293b;
+    border-color: var(--text-secondary);
+    background: var(--glass-border);
 }
 
 /* Feature Grid */
@@ -234,9 +236,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(30, 41, 59, 0.5);
+    background: var(--card-bg);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
     padding: 20px 40px;
     gap: 40px;
@@ -252,30 +254,30 @@
 .feature-icon {
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--glass-border);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #a78bfa;
+    color: var(--accent-purple);
 }
 
 .feature-item h4 {
     font-size: 0.9rem;
-    color: #f8fafc;
+    color: var(--text-primary);
     margin-bottom: 2px;
 }
 
 .feature-item p {
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: var(--text-secondary);
     margin: 0;
 }
 
 .feature-divider {
     width: 1px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--glass-border);
 }
 
 /* Mobile */
